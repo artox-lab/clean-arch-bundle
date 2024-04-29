@@ -64,7 +64,7 @@ class AbstractApiController extends AbstractController
         $this->commandBus        = $commandBus;
         $this->queryBus          = $queryBus;
     }
-    
+
     /**
      * Response with Cache-Control header
      *
@@ -81,9 +81,9 @@ class AbstractApiController extends AbstractController
     /**
      * Response of creating resource
      *
-     * @param null  $data    Data
-     * @param int   $status  Status code of response
-     * @param array $headers Headers
+     * @param mixed $data    The response data
+     * @param int   $status  The response status code
+     * @param array $headers An array of response headers
      * @param array $context Serializer's context
      *
      * @return Response
