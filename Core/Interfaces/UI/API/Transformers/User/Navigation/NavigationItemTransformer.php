@@ -17,7 +17,7 @@ class NavigationItemTransformer extends TransformerAbstract
             'link'     => $item->link(),
             'children' => array_map(function (NavigationItem $item) {
                 return $this->transform($item);
-            }, $item->children()->toArray()),
+            }, array_values($item->children()->toArray())),
         ];
     }
 }
